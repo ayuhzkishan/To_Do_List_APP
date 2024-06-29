@@ -45,4 +45,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.material.v190)
+    implementation(libs.androidx.cardview)
+
 }
