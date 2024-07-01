@@ -1,34 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.todolist.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/taskstext"
-        android:textStyle="bold"
-        android:text="Tasks"
-        android:textColor="@color/black"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
-        android:textSize="30sp">
-    </TextView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tasksrecyclerview"
+
+    <ListView
+        android:id="@+id/items_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/taskstext"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:nestedScrollingEnabled="true">
-    </androidx.recyclerview.widget.RecyclerView>
-    
+        android:layout_height="783dp"
+        android:scrollbars="none" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -38,6 +23,6 @@
         android:layout_margin="32dp"
         android:backgroundTint="#5aa2ff"
         android:src="@drawable/baseline_add"
+        android:layout_gravity="bottom|end"/>
 
-
-</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
