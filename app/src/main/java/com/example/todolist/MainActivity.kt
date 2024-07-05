@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(), ItemRowListener {
         val headerView = LayoutInflater.from(this).inflate(R.layout.list_header, listViewItems, false)
         listViewItems!!.addHeaderView(headerView)
 
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener { _ ->
             addNewItemDialog()
         }
 
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity(), ItemRowListener {
         alert.setMessage("Add New Item")
         alert.setTitle("Enter To Do Item Text")
         alert.setView(itemEditText)
-        alert.setPositiveButton("Submit") { dialog, positiveButton ->
+        alert.setPositiveButton("Submit") { dialog, _ ->
             val todoItem = ToDoItem.create()
             todoItem.itemText = itemEditText.text.toString()
             todoItem.done = false
